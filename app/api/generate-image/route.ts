@@ -1,7 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import OpenAI from 'openai';
 
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+// Only initialize OpenAI client if API key is available
+const openai = process.env.OPENAI_API_KEY 
+  ? new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
+  : null;
 
 export async function POST(req: NextRequest) {
   try {
@@ -9,6 +12,10 @@ export async function POST(req: NextRequest) {
     
     if (!process.env.OPENAI_API_KEY) {
       return NextResponse.json({ error: 'OpenAI API key not configured.' }, { status: 500 });
+    }
+
+    if (!openai) {
+      return NextResponse.json({ error: 'OpenAI client not initialized.' }, { status: 500 });
     }
 
     const response = await openai.images.generate({
