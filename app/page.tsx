@@ -1,6 +1,23 @@
 export default function Home() {
   return (
     <>
+      {/* Navigation */}
+      <nav className="bg-white shadow-sm border-b">
+        <div className="max-w-4xl mx-auto px-4 py-4">
+          <div className="flex justify-between items-center">
+            <div className="text-xl font-bold text-emerald-600">Coloring Books</div>
+            <div className="flex gap-4">
+              <a href="/generate" className="text-emerald-600 hover:text-emerald-800 font-medium">
+                🎨 Generate & Color
+              </a>
+              <a href="/coloring-demo" className="text-emerald-600 hover:text-emerald-800 font-medium">
+                🖌️ Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4 py-8 md:py-16 bg-gradient-to-br from-green-50 to-emerald-50">
         <div className="relative z-10 max-w-4xl mx-auto text-center">
@@ -16,8 +33,8 @@ export default function Home() {
             Perfect for mindfulness, stress relief, and creative relaxation.
           </p>
           
-          {/* Single Primary CTA */}
-          <div className="mb-8 px-4">
+          {/* Primary CTAs */}
+          <div className="mb-8 px-4 space-y-4">
             <a 
               href="https://www.amazon.com/Spooky-Fun-Halloween-Coloring-Book/dp/B0DGF4MFCK/" 
               target="_blank" 
@@ -26,6 +43,20 @@ export default function Home() {
             >
               🎨 Shop Now - Starting at $10.99
             </a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a 
+                href="/generate" 
+                className="bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-blue-700 transition-all duration-300 inline-block"
+              >
+                🤖 Try AI Generator
+              </a>
+              <a 
+                href="/coloring-demo" 
+                className="bg-purple-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-purple-700 transition-all duration-300 inline-block"
+              >
+                🖌️ Interactive Demo
+              </a>
+            </div>
           </div>
           
           {/* Trust Indicators */}
@@ -47,6 +78,68 @@ export default function Home() {
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
               </svg>
               30-Day Returns
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Interactive AI Coloring Section */}
+      <section className="py-16 px-4 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-emerald-900">
+            🎨 Try Our AI Coloring Experience!
+          </h2>
+          <p className="text-xl text-emerald-700 mb-8 max-w-2xl mx-auto">
+            Generate custom coloring pages with AI and color them digitally. Perfect for testing before buying our physical books!
+          </p>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            {/* AI Generate Feature */}
+            <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                <span className="text-2xl">🤖</span>
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-gray-800">AI-Generated Pages</h3>
+              <p className="text-gray-600 mb-4">Create custom coloring pages with DALL·E AI. Just describe what you want!</p>
+              <a 
+                href="/generate" 
+                className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
+              >
+                Generate Now
+              </a>
+            </div>
+            
+            {/* Interactive Demo */}
+            <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                <span className="text-2xl">🖌️</span>
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-gray-800">Interactive Demo</h3>
+              <p className="text-gray-600 mb-4">Try our coloring interface with a sample design. Click to fill with colors!</p>
+              <a 
+                href="/coloring-demo" 
+                className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors inline-block"
+              >
+                Try Demo
+              </a>
+            </div>
+          </div>
+          
+          <div className="bg-white rounded-xl p-6 shadow-lg max-w-2xl mx-auto">
+            <h3 className="text-lg font-semibold mb-3 text-emerald-900">Why Try Our Digital Experience?</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+              <div className="flex items-center">
+                <span className="text-green-500 mr-2">✓</span>
+                <span>Test before buying</span>
+              </div>
+              <div className="flex items-center">
+                <span className="text-green-500 mr-2">✓</span>
+                <span>Unlimited designs</span>
+              </div>
+              <div className="flex items-center">
+                <span className="text-green-500 mr-2">✓</span>
+                <span>Instant results</span>
+              </div>
             </div>
           </div>
         </div>
