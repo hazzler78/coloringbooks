@@ -54,6 +54,19 @@ export default function RootLayout({
         {/* End Facebook Pixel Code */}
       </head>
       <body className={`${inter.className} hero-gradient text-gray-800`}>
+        <header className="bg-white shadow-sm border-b">
+          <div className="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
+            <img src="/header_smallwonderart.png" alt="Small Wonder Art" className="h-10 w-auto" />
+            <nav className="flex gap-4">
+              <a href="/generate" className="text-pantone8021 hover:text-[#6F5220] font-medium">
+                🎨 Generate & Color
+              </a>
+              <a href="/coloring-demo" className="text-pantone8021 hover:text-[#6F5220] font-medium">
+                🖌️ Demo
+              </a>
+            </nav>
+          </div>
+        </header>
         {children}
         
         {/* Vercel Analytics */}

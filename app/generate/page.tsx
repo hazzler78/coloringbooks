@@ -129,7 +129,7 @@ export default function GeneratePage() {
   };
 
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen bg-gray-50 p-6">
+    <main className="flex flex-col items-center justify-center min-h-screen p-6" style={{ background: 'linear-gradient(135deg, #F2EAE3 0%, #C5B9AC 50%, #A4BCC2 100%)' }}>
       <h1 className="text-3xl font-bold mb-6">Generate & Color with DALL·E</h1>
       
       {/* Generate Section */}
@@ -143,7 +143,7 @@ export default function GeneratePage() {
           />
           <button
             onClick={generateImage}
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg mb-4 disabled:opacity-50 text-lg font-semibold hover:bg-blue-700 transition-colors"
+            className="bg-pantone7542 text-white px-6 py-3 rounded-lg mb-4 disabled:opacity-50 text-lg font-semibold hover:brightness-90 transition-colors"
             disabled={loading || !prompt.trim()}
           >
             {loading ? 'Generating...' : 'Generate Coloring Page'}
@@ -185,7 +185,7 @@ export default function GeneratePage() {
                 />
                 <button
                   onClick={downloadImage}
-                  className="mt-3 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors"
+                  className="mt-3 bg-pantone8021 text-white px-4 py-2 rounded hover:brightness-90 transition-colors"
                 >
                   Download Original
                 </button>
@@ -202,13 +202,13 @@ export default function GeneratePage() {
                 <div className="mt-3 space-x-2">
                   <button
                     onClick={loadImageToCanvas}
-                    className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
+                    className="bg-pantone7542 text-white px-4 py-2 rounded hover:brightness-90 transition-colors"
                   >
                     Reset Canvas
                   </button>
                   <button
                     onClick={downloadColored}
-                    className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition-colors"
+                    className="bg-pantone8021 text-white px-4 py-2 rounded hover:brightness-90 transition-colors"
                   >
                     Download Colored
                   </button>

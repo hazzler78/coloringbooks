@@ -9,6 +9,11 @@ module.exports = {
       fontFamily: {
         'inter': ['Inter', 'sans-serif'],
       },
+      colors: {
+        pantone7542: '#A4BCC2', // blue
+        pantone7528: '#C5B9AC', // beige
+        pantone8021: '#8C6A2A', // brown
+      },
     },
   },
   plugins: [],

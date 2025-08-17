@@ -99,7 +99,7 @@ export default function ColoringDemo() {
   };
 
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen bg-gray-50 p-6">
+    <main className="flex flex-col items-center justify-center min-h-screen p-6" style={{ background: 'linear-gradient(135deg, #F2EAE3 0%, #C5B9AC 50%, #A4BCC2 100%)' }}>
       <h1 className="text-3xl font-bold mb-6">🎨 Interactive Coloring Demo</h1>
       
       {/* Color Palette */}
@@ -193,26 +193,26 @@ export default function ColoringDemo() {
       <div className="flex gap-4 mt-6">
         <button
           onClick={resetColors}
-          className="bg-yellow-600 text-white px-4 py-2 rounded shadow hover:bg-yellow-700 transition-colors"
+          className="bg-pantone8021 text-white px-4 py-2 rounded shadow hover:brightness-90 transition-colors"
         >
           🔄 Reset Colors
         </button>
         <button
           onClick={downloadSVG}
-          className="bg-green-600 text-white px-4 py-2 rounded shadow hover:bg-green-700 transition-colors"
+          className="bg-pantone7542 text-white px-4 py-2 rounded shadow hover:brightness-90 transition-colors"
         >
           📥 Download SVG
         </button>
         <button
           onClick={downloadPNG}
-          className="bg-blue-600 text-white px-4 py-2 rounded shadow hover:bg-blue-700 transition-colors"
+          className="bg-pantone8021 text-white px-4 py-2 rounded shadow hover:brightness-90 transition-colors"
         >
           📥 Download PNG
         </button>
       </div>
 
       {/* Messages */}
-      {message && <p className="mt-4 text-green-600 font-semibold">{message}</p>}
+      {message && <p className="mt-4 text-pantone8021 font-semibold">{message}</p>}
       
       {/* Instructions */}
       <div className="mt-6 text-center text-gray-600 max-w-md">
